@@ -3,10 +3,10 @@
 $x = null;
 echo $x;
 $y = 344;
-var_dump($x);
+var_dump($x); // NULL
 
-var_dump(is_null($x));
-var_dump($y === null);
+var_dump(is_null($x)); //bool(true)
+var_dump($y === null); //bool(false)
 
 var_dump($name); //show Warning: Undefined variable $name in C:\xampp\htdocs\php_with_gio\lecture-10\null.php on line 11
                     //buy value show NULL 
