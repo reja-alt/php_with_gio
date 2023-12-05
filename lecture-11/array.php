@@ -80,8 +80,24 @@ print_r($number);
 
 //array_shift removes first element from array
 $number2 = [0 => 27, 1 => 37, 5 => 60,59,63];
-echo array_shift($number2); //27  and array will be reindex
+echo array_shift($number2); //27  and array will be reindex but not numeric will remain same
 print_r($number2); //also index 5 will remove and start from 0 to 1,2....
 
+unset($number2[5], $number2[1]); //array will not reindex
+print_r($number2);
+
+$unset = [23,43,4];
+unset($unset[0], $unset[1], $unset[2]);
+
+$unset[] = 90; //now after unset if i push then index will be the next of the unsetted max index ,here index will be 3
+
+$task = ['a' => 45, 'b' => null];
+
+var_dump(array_key_exists('a', $task)); //bool(true)
+var_dump(isset($task['a'])); // bool(true)
+
+//but for null value isset will be false
+var_dump(array_key_exists('b', $task)); //bool(true)
+var_dump(isset($task['b']));  //bool(false)
 
 
