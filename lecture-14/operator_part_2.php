@@ -3,7 +3,7 @@
 $x = file('foo.txt');
 var_dump($x); // file(foo.txt): Failed to open stream if i use @ these error would gone like below
 
-$y = @file('foo.txt');
+$y = @file('foo.txt'); //supressive operator
 var_dump($x);
 
 //increment and decrement operator
