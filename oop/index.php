@@ -13,3 +13,6 @@ $db->connect('local', 'test', 'root', 'pass');
 $db->link;
 echo '<pre>';
 var_dump($db);
+
+$single_ton = new SingleTon();
+var_dump($single_ton);
